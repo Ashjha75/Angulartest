@@ -1,8 +1,17 @@
 <div class="container mt-5">
   <h2 class="text-primary mb-4">Bootstrap Integration Test</h2>
+    <div class="alert alert-{{ alertType }}" role="alert">
+    {{ alertMessage }}
+  </div>
   
-  <div class="alert alert-success" role="alert">
-    Bootstrap has been successfully integrated into your Angular 17 project!
+  <div class="mb-4">
+    <h4>Change Alert Type:</h4>
+    <div class="btn-group">
+      <button class="btn btn-success" (click)="changeAlert('success')">Success</button>
+      <button class="btn btn-warning" (click)="changeAlert('warning')">Warning</button>
+      <button class="btn btn-danger" (click)="changeAlert('danger')">Danger</button>
+      <button class="btn btn-info" (click)="changeAlert('info')">Info</button>
+    </div>
   </div>
   
   <div class="row">
@@ -36,12 +45,40 @@
       </div>
     </div>
   </div>
-
   <div class="mt-4">
     <button type="button" class="btn btn-primary me-2">Primary</button>
     <button type="button" class="btn btn-secondary me-2">Secondary</button>
     <button type="button" class="btn btn-success me-2">Success</button>
     <button type="button" class="btn btn-danger me-2">Danger</button>
     <button type="button" class="btn btn-warning me-2">Warning</button>
+  </div>
+  
+  <div class="mt-5">
+    <h4>Bootstrap Modal Example</h4>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Launch Bootstrap Modal
+    </button>
+  </div>
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Bootstrap Modal in Angular</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>This demonstrates that Bootstrap JavaScript components are properly integrated!</p>
+        <div class="alert alert-info">
+          Modal dialogs are an important UI component for many applications.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
   </div>
 </div>

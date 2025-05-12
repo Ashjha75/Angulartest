@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global styles for Angular app with Bootstrap integration */
+
+/* Base styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+}
+
+body {
+  padding-bottom: 70px; /* Space for footer */
+  background-color: #f8f9fa;
+}
+
+/* Custom utility classes */
+.page-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Custom component styles */
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Some Bootstrap customizations */
+.btn {
+  border-radius: 0.25rem;
+}
+
+/* Ensure main content takes up at least the viewport height minus header/footer */
+main {
+  min-height: calc(100vh - 160px);
+}
